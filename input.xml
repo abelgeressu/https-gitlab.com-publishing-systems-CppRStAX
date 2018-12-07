@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<test>
+  <!-- Comment -->
+  <?application init?>
+  <ns:content xml:lang="en" lang="en">
+    Hello, &amp; world!
+  </ns:content>
+</test>
