@@ -1,4 +1,4 @@
-/* Copyright (C) 2017-2018 Stephan Kreutzer
+/* Copyright (C) 2017-2019 Stephan Kreutzer
  *
  * This file is part of CppRStAX.
  *
@@ -35,7 +35,7 @@ int Run(std::istream& aStream);
 
 int main(int argc, char* argv[])
 {
-    std::cout << "CppRStAX Copyright (C) 2017-2018 Stephan Kreutzer\n"
+    std::cout << "CppRStAX Copyright (C) 2017-2019 Stephan Kreutzer\n"
               << "This program comes with ABSOLUTELY NO WARRANTY.\n"
               << "This is free software, and you are welcome to redistribute it\n"
               << "under certain conditions. See the GNU Affero General Public License 3\n"
@@ -162,6 +162,15 @@ int Run(std::istream& aStream)
                     {
                     case '\"':
                         strTag += "&quot;";
+                        break;
+                    case '&':
+                        strTag += "&amp;";
+                        break;
+                    case '<':
+                        strTag += "&lt;";
+                        break;
+                    case '>':
+                        strTag += "&gt;";
                         break;
                     default:
                         strTag += *iter;
